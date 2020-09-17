@@ -104,6 +104,7 @@ const controlRecipe = async () => {
 
 const controlList = () => {
   // create a new list if there is none yet
+  listView.clearList();
   if (!state.list) state.list = new List();
   // Add each ingredient to the list and UI
   state.recipe.ingredients.forEach(el => {
