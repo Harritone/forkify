@@ -444,6 +444,10 @@ body {
     list-style: none;
     max-height: 77rem;
     overflow: scroll; }
+
+  .shopping__list::-webkit-scrollbar {
+    display: none;
+  }
   .shopping__item {
     display: flex;
     align-items: flex-start;
