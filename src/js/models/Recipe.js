@@ -54,7 +54,7 @@ export default class Recipe {
         // There is a unit
         // Ex. 3 1/2 cups, arrCount is [3, 1/2] -> eval('3+1/2') -> 3.5
         // Ex. 4 cups, arrCount is [4]
-        const arrCount =arrIng.slice(0, unitIndex); 
+        const arrCount = arrIng.slice(0, unitIndex); 
         let count;
         if (arrCount.length === 1) {
           count =  (eval(arrIng[0].replace('-', '+')));

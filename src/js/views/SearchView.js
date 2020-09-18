@@ -17,10 +17,10 @@ export const highlightSelected = id => {
   resultsArr.forEach(el => {
     el.classList.remove('results__link--active');
   })
-  document.querySelector(`a[href="#${id}"]`).classList.add('results__link--active');
+  document.querySelector(`.results__link[href="#${id}"]`).classList.add('results__link--active');
 };
 
-const limitRecipeTitle = (title, limit = 17) => {
+export const limitRecipeTitle = (title, limit = 17) => {
   const newTitle = [];
   if (title.length > limit) {
     title.split(' ').reduce((acc, cur) => {
@@ -68,7 +68,7 @@ const renderButtons = (page, numResults, resPerPage) => {
 
   let button;
   if (page === 1 && pages > 1) {
-    // only batton to go to next page
+    // only button to go to next page
     button = createButton(page, 'next');
   } else if (page < pages) {
     // Both buttons
